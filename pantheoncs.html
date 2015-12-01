@@ -1,0 +1,84 @@
+<head>
+    <title>pantheoncs</title>
+</head>
+
+<body>
+<h3 align="center">Pantheon Pool based team generator</h3>
+<br>
+<row>
+
+
+<div class="col-md-4">
+    <div class="panel panel-success">
+        <div class="panel-heading">
+            <h4 class="panel-title">Select player available for match :</h4>
+        </div>
+        <div class="panel-body">{{> playerboard}}
+        </div>
+    </div>
+</div>
+
+</row>
+
+{{> teams}}
+
+</body>
+
+<template name="playerboard">
+    <form action="action">
+        {{#each player}}
+            <ul>
+                <input type="checkbox" {{checked}}>{{name}}
+            </ul>
+
+        {{/each}}
+        <ul><li>number of players : {{count}}</li></ul>
+    </form>
+    {{#each random}}
+        {{name}}
+    {{/each}}
+</template>
+
+
+
+<template name="teams">
+
+
+
+    <div class="col-md-4">
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h4 class="panel-title">Counter Terrorist</h4>
+            </div>
+            <div class="panel-body">
+
+                {{#each teamCT}}
+
+                <ul>
+                    {{name}}
+                </ul>
+
+            {{/each}}
+                <input type="button" class="getteams btn btn-md btn-info" value="get teams">
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h4 class="panel-title">Terrorist</h4>
+            </div>
+            <div class="panel-body">
+                {{#each teamT}}
+
+                    <ul>
+                        {{name}}
+                    </ul>
+
+                {{/each}}
+            </div>
+        </div>
+    </div>
+
+</template>
