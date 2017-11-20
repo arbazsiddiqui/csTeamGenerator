@@ -4,7 +4,7 @@ generates teams for Counter Strike based on pool based randomization. Built on m
 
 
 
-#####Steps to run :
+##### Steps to run :
 
 
 1. Download the repository.
